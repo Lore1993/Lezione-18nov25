@@ -1,34 +1,28 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
+
+
+// per poter utilizzare una dependences bisogna aggiungerla al file interessato(in questo caso app).
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Container from 'react-bootstrap/Container'
+import {Row, Col} from 'react-bootstrap/Row'
+import RestaurantNavBar from "./components/comp_navBar"
 // Un componente react puo essere anche soltanto una funziona che ritorna/crea una sintassi chiamata jsx
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+  <RestaurantNavBar/>
+    <Container className='container'>
+      <Row className='justify-content-center'>
+        <Col xs={12} md={8} lg={4}>
+        
+          <img src='https://placebear.com/300/300' className='w-100'></img>
+        </Col>
+      </Row>
+    </Container>
+      <h1 className='text-center'>CIaone</h1>
     </>
   )
 }
