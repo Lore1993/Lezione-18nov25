@@ -4,8 +4,7 @@ import { useState } from 'react'
 
 // per poter utilizzare una dependences bisogna aggiungerla al file interessato(in questo caso app).
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Container from 'react-bootstrap/Container'
-import {Row, Col} from 'react-bootstrap/Row'
+import { Container, Row, Col } from 'react-bootstrap'
 import RestaurantNavBar from "./components/comp_navBar"
 // Un componente react puo essere anche soltanto una funziona che ritorna/crea una sintassi chiamata jsx
 function App() {
